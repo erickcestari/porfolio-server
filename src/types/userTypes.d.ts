@@ -15,3 +15,7 @@ export interface UpdateUserType {
 export interface SearchManyPetsReturn {
   users: User[]
 }
+
+export interface RegisterUserType {
+  code: string
+}

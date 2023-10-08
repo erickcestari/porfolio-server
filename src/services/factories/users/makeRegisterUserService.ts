@@ -1,9 +1,9 @@
-import { CreateUserService } from "@/services/users/createUser";
+import { RegisterUserService } from "@/services/users/register";
 import { PrismaUsersRepository } from "@/repositories/prisma/prismaUserRepository"; 
 
-export const makeCreateUserService = () => {
+export const makeRegisterUserService = () => {
   const prismaUsersRepository = new PrismaUsersRepository();
-  const service = new CreateUserService(
+  const service = new RegisterUserService(
     prismaUsersRepository,
   );
 

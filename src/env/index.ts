@@ -5,6 +5,9 @@ const envSchema = z.object({
   PORT: z.coerce.number().default(3333),
   DATABASE_URL: z.string(),
   NODE_ENV: z.string().default("dev"),
+  JWT_SECRET: z.string(),
+  GITHUB_CLIENT_ID: z.string(),
+  GITHUB_CLIENT_SECRET: z.string(),
 });
 
 const _env = envSchema.safeParse(process.env);
